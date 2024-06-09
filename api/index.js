@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
+import projectsRoute from "./routes/projects.js";
 
 dotenv.config();
 const app = express();
@@ -20,6 +21,8 @@ const connect = async () => {
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
+app.use("/api/projects", projectsRoute);
+
 
 app.use((err, req, res, next) => {
     const errorStatus = err.errorStatus || 500;
