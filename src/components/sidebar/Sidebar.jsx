@@ -26,7 +26,9 @@ const Sidebar = () => {
             <span>Portfolio</span>
           </li>
           <li>
+            <Link to="/project" style={{ textDecoration: "none" }}>
             <span>Project</span>
+            </Link>
           </li>
           <li>
             <Link to="/finance" style={{ textDecoration: "none" }}>
