@@ -23,6 +23,9 @@ const UserSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    investedProject: {
+      type:[String],
+    }
   },
   { timestamps: true }
 );
